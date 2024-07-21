@@ -1,0 +1,126 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'passion_black';
+    src: url('../fonts/PassionOne-Black.ttf') format('truetype');
+}
+@font-face {
+    font-family:'passion_bold';
+    src: url('../fonts/PassionOne-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'passion_regular';
+    src: url('../fonts/PassionOne-Regular.ttf') format('truetype');
+}
+@font-face{
+    font-family:'sriracha';
+    src: url('../fonts/Sriracha-Regular.ttf') format('truetype');
+}
+
+:root{
+    --font-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --font-passion-black: 'passion_black';
+    --font-passion-bold: 'passion_bold';
+    --font-passion-regular: 'passion_regular';
+    --font-sriracha: 'sriracha';
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body{
+    min-height: 100vh;
+    background-color: darkgray;
+}
+
+header{
+    border: 1px solid black;
+    text-align: center;
+    background-color:black;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 50px; 
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.493);
+}
+
+header a{
+    color: white;
+}
+
+header > h1{  
+    font-family: var(--font-passion-bold);   
+    font-size: 2.5em;
+    font-variant: small-caps;
+}
+
+header > p{
+    padding-top: 5px;
+    font-size: 0.8em;
+}
+
+main > section{
+    padding-top: 10vh; /* vh = porcentagem de altura da view. Usar medidas baseadas na tela, não medidas fixas, trancadas. Assim, tamanho acompanha a telas dos dispositivos */
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    line-height: 2em;
+    font-family: var(--font-sriracha);
+    font-size: 3.5vw;
+}
+
+section.normal{
+    background-color: white;
+    color:black;
+    
+}
+
+section.imagem{
+    background-color: rgba(0, 0, 0, 0.233);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px  rgba(0, 0, 0, 0.527);
+}
+
+section.imagem > p {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.26);
+    padding: 5px;
+    
+}
+
+section#flor{
+    background-image: url('../imagens/background001.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right center; 
+}
+
+section#livro{
+    background-image: url('../imagens/background002.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right center;
+    
+}
+footer{
+    border: 1px solid black;
+    height: 20px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: auto;
+    background-color: black;
+    color: white;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.473);
+}
+footer a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+footer a:hover{
+    padding: 3px;
+    border-radius: 6px;
+    background-color: white;
+    color: black;
+    transition-duration: 0.8s
+}
